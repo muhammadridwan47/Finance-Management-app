@@ -1,4 +1,4 @@
-import { useNavigation } from "@react-navigation/native";
+import { useNavigation } from '@react-navigation/native';
 
 const useNavHome = () => {
     const nav = useNavigation();
@@ -7,7 +7,7 @@ const useNavHome = () => {
     };
 
     return {
-        goToAddTransaction
+        goToAddTransaction,
     };
 };
 

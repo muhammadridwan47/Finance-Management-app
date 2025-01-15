@@ -21,6 +21,16 @@ const styles = StyleSheet.create({
     marginTop: 10,
     padding: 10,
   },
+  actionCard: {flexDirection: 'row', marginTop: 6},
+  btnEdit: {
+    fontSize: 16,
+    color: 'green',
+    marginRight: 8
+  },
+  btnRemove: {
+    fontSize: 16,
+    color: 'red',
+  },
 });
 
 export default styles;

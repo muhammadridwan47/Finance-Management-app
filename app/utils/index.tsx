@@ -9,4 +9,4 @@ const getDateNow = () => {
   return `${day} - ${month} - ${year}`;
 }
 
-export {getDateNow}
+export {getDateNow};
