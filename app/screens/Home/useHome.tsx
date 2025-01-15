@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
 import useNavHome from './useNavHome';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
  const useHome = () => {
     const nav = useNavHome();
     const selector = useSelector(state => state);
+    const dispatch = useDispatch();
 
     const [transactions, setTransactions] = useState([]);
 
@@ -13,7 +14,8 @@ import { useSelector } from 'react-redux';
     };
 
     const onRemove = (id: string) => {
-        console.log(id);
+        const data = selector?.data.filter(item => item.id !== id);
+        dispatch({type: 'TRANSACTION', value: data });
     };
 
     const onEdit = (id: string) => {
